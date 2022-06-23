@@ -27,7 +27,8 @@ all_tmux_processes() {
 	local user_id=$(id -u)
 	ps -u $user_id -o "command pid" |
 		\grep "^tmux" |
-		\grep -v "^tmux source"
+		\grep -v "^tmux source" |
+                \grep -v "^tmux attach"
 }
 
 number_tmux_processes_except_current_server() {
