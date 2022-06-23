@@ -46,5 +46,6 @@ number_current_server_client_processes() {
 
 another_tmux_server_running_on_startup() {
 	# there are 2 tmux processes (current tmux server + 1) on tmux startup
-	[ "$(number_tmux_processes_except_current_server)" -gt 1 ]
+	# [ "$(number_tmux_processes_except_current_server)" -gt 1 ]
+	false
 }
